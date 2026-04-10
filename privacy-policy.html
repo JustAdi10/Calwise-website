@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calwise Privacy Policy</title>
+    <meta
+      name="description"
+      content="Read the Calwise privacy policy to understand how your food logs and nutrition data are handled on your device."
+    />
+    <meta property="og:title" content="Calwise Privacy Policy" />
+    <meta
+      property="og:description"
+      content="Calwise is privacy-first. Learn about local data storage, HealthKit integration, and your privacy rights."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Calwise Privacy Policy" />
+    <meta
+      name="twitter:description"
+      content="Calwise keeps your nutrition data local to your device. Read our full privacy policy."
+    />
+    <meta name="twitter:image" content="./logo.png" />
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="apple-touch-icon" href="./logo.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-wrap">
+        <a href="./index.html" class="brand" aria-label="Calwise home">
+          <img src="./logo.png" alt="Calwise logo" class="brand-logo" />
+          <span class="brand-text">Calwise</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="./index.html">Home</a>
+          <a href="./privacy-policy.html" aria-current="page">Privacy Policy</a>
+          <a href="./contact.html">Contact Us</a>
+        </nav>
+      </div>
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="./index.html">Home</a>
+        <a href="./privacy-policy.html" aria-current="page">Privacy Policy</a>
+        <a href="./contact.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <main class="section reveal">
+      <div class="container">
+        <article class="content-card">
+          <h1>Privacy Policy</h1>
+          <p>
+            This Privacy Policy explains how Calwise handles your information when you use our iOS app and this website.
+          </p>
+
+          <h2>1. Information We Collect</h2>
+          <p>
+            Calwise is designed to store your nutrition and meal log data locally on your iPhone. We do not operate a backend
+            service for meal history and we do not transmit your food log entries to our servers.
+          </p>
+
+          <h2>2. Health Data (HealthKit)</h2>
+          <p>
+            If you grant permission, Calwise may read from and/or write nutrition-related information using Apple HealthKit.
+            HealthKit data is used only to provide app features you request. We do not sell HealthKit data and do not use it
+            for advertising purposes.
+          </p>
+
+          <h2>3. Third-Party Services</h2>
+          <p>
+            Calwise may use limited third-party services for app distribution and basic operational analytics, such as Apple
+            App Store services. These services may process technical data under their own privacy terms. Calwise does not
+            share your meal logs or personal nutrition history with third-party providers.
+          </p>
+
+          <h2>4. Data Retention</h2>
+          <p>
+            Because your app data is stored locally, retention is controlled by your device and usage choices. If you delete
+            the app, local data may be deleted as part of iOS app removal behavior unless you have backups enabled through
+            Apple services.
+          </p>
+
+          <h2>5. Your Rights and Choices</h2>
+          <ul>
+            <li>You can edit or delete your logged entries directly in the app.</li>
+            <li>You can revoke HealthKit permissions anytime in iOS Settings.</li>
+            <li>You can uninstall the app to remove locally stored app data from your device.</li>
+          </ul>
+
+          <h2>6. Children&apos;s Privacy</h2>
+          <p>
+            Calwise is not directed to children under 13. We do not knowingly collect personal information from children.
+          </p>
+
+          <h2>7. Changes To This Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time to reflect product or legal changes. The latest version will
+            always be posted on this page.
+          </p>
+
+          <h2>8. Contact</h2>
+          <p>
+            For privacy questions or concerns, contact us at
+            <a class="mail-link" href="mailto:calwiseapp@gmail.com">calwiseapp@gmail.com</a>.
+          </p>
+
+          <h2>Last Updated</h2>
+          <p>April 10, 2026</p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Calwise. All rights reserved.</p>
+        <nav aria-label="Footer links">
+          <a href="./index.html">Home</a>
+          <span aria-hidden="true">·</span>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <span aria-hidden="true">·</span>
+          <a href="./contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var header = document.getElementById('siteHeader');
+        var menuToggle = document.getElementById('menuToggle');
+        var mobileNav = document.getElementById('mobileNav');
+        var revealTargets = document.querySelectorAll('.reveal');
+
+        function updateHeader() {
+          if (!header) {
+            return;
+          }
+          if (window.scrollY > 8) {
+            header.classList.add('is-scrolled');
+          } else {
+            header.classList.remove('is-scrolled');
+          }
+        }
+
+        function closeMobileMenu() {
+          if (!menuToggle || !mobileNav) {
+            return;
+          }
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mobileNav.classList.remove('is-open');
+        }
+
+        if (menuToggle && mobileNav) {
+          menuToggle.addEventListener('click', function () {
+            var expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            mobileNav.classList.toggle('is-open');
+          });
+
+          mobileNav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', closeMobileMenu);
+          });
+        }
+
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        updateHeader();
+
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(
+            function (entries, io) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible');
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1 }
+          );
+
+          revealTargets.forEach(function (target) {
+            observer.observe(target);
+          });
+        } else {
+          revealTargets.forEach(function (target) {
+            target.classList.add('is-visible');
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

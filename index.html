@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calwise | Track smarter. Eat better.</title>
+    <meta
+      name="description"
+      content="Calwise is a clean, iOS-first calorie tracker that helps you log meals fast, monitor macros, and stay consistent every day."
+    />
+    <meta property="og:title" content="Calwise | Track smarter. Eat better." />
+    <meta
+      property="og:description"
+      content="Smart calorie tracking for iPhone. Log meals in seconds, view macros at a glance, and hit your daily goals."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./app-screenshot.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Calwise | Track smarter. Eat better." />
+    <meta
+      name="twitter:description"
+      content="Smart calorie tracking for iPhone with effortless meal logging and macro insights."
+    />
+    <meta name="twitter:image" content="./app-screenshot.png" />
+    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="apple-touch-icon" href="./logo.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-wrap">
+        <a href="./index.html" class="brand" aria-label="Calwise home">
+          <img src="./logo.png" alt="Calwise logo" class="brand-logo" />
+          <span class="brand-text">Calwise</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="./index.html">Home</a>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./contact.html">Contact Us</a>
+        </nav>
+      </div>
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="./index.html">Home</a>
+        <a href="./privacy-policy.html">Privacy Policy</a>
+        <a href="./contact.html">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section reveal">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Calorie Tracking For iPhone</p>
+            <h1>Track smarter. Eat better.</h1>
+            <p class="lead">
+              Calwise helps you stay on top of calories and macros with a fast, beautifully simple flow that feels right
+              at home on iOS.
+            </p>
+            <a class="app-store-badge" href="#" aria-label="Download on the App Store">
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+                alt="Download on the App Store"
+              />
+            </a>
+          </div>
+
+          <div class="phone-stage" aria-hidden="true">
+            <div class="iphone-frame">
+              <div class="notch"></div>
+              <img src="./app-screenshot.png" alt="Calwise app screenshot" class="screen-shot" loading="lazy" />
+              <div class="phone-glow"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="container">
+          <h2>Built for everyday consistency</h2>
+          <div class="features-grid">
+            <article class="card feature-card">
+              <h3>🥗 Smart Calorie Tracking</h3>
+              <p>Log meals in seconds with an interface designed for quick, repeatable daily use.</p>
+            </article>
+            <article class="card feature-card">
+              <h3>📊 Macro Breakdown</h3>
+              <p>See protein, carbs, and fats at a glance so your nutrition choices stay intentional.</p>
+            </article>
+            <article class="card feature-card">
+              <h3>📅 Daily Progress</h3>
+              <p>Stay consistent with a weekly view that keeps momentum visible and goals within reach.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-strip reveal" aria-label="Calwise stats">
+        <div class="container stats-grid">
+          <p><strong>2000 kcal goals set daily</strong></p>
+          <p><strong>Track Protein, Carbs &amp; Fats</strong></p>
+          <p><strong>Built for iOS 26</strong></p>
+        </div>
+      </section>
+
+      <section class="section cta-section reveal">
+        <div class="container cta-wrap">
+          <h2>Start building better nutrition habits today</h2>
+          <p>Download Calwise and make calorie tracking feel effortless from day one.</p>
+          <a class="app-store-badge" href="#" aria-label="Download on the App Store">
+            <img
+              src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+              alt="Download on the App Store"
+            />
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Calwise. All rights reserved.</p>
+        <nav aria-label="Footer links">
+          <a href="./index.html">Home</a>
+          <span aria-hidden="true">·</span>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <span aria-hidden="true">·</span>
+          <a href="./contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var header = document.getElementById('siteHeader');
+        var menuToggle = document.getElementById('menuToggle');
+        var mobileNav = document.getElementById('mobileNav');
+
+        function updateHeader() {
+          if (!header) {
+            return;
+          }
+          if (window.scrollY > 8) {
+            header.classList.add('is-scrolled');
+          } else {
+            header.classList.remove('is-scrolled');
+          }
+        }
+
+        function closeMobileMenu() {
+          if (!menuToggle || !mobileNav) {
+            return;
+          }
+          menuToggle.setAttribute('aria-expanded', 'false');
+          mobileNav.classList.remove('is-open');
+        }
+
+        if (menuToggle && mobileNav) {
+          menuToggle.addEventListener('click', function () {
+            var expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            mobileNav.classList.toggle('is-open');
+          });
+
+          mobileNav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', closeMobileMenu);
+          });
+
+          window.addEventListener('resize', function () {
+            if (window.innerWidth > 768) {
+              closeMobileMenu();
+            }
+          });
+        }
+
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        updateHeader();
+
+        var sections = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(
+            function (entries, io) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible');
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.14, rootMargin: '0px 0px -40px 0px' }
+          );
+
+          sections.forEach(function (section) {
+            observer.observe(section);
+          });
+        } else {
+          sections.forEach(function (section) {
+            section.classList.add('is-visible');
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
