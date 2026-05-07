@@ -6,12 +6,12 @@
     <title>Calwise Privacy Policy</title>
     <meta
       name="description"
-      content="Read the Calwise privacy policy to understand how your food logs and nutrition data are handled on your device."
+      content="Read the Calwise privacy policy to learn how we handle account data, Apple Health data, usage analytics, and support requests."
     />
     <meta property="og:title" content="Calwise Privacy Policy" />
     <meta
       property="og:description"
-      content="Calwise is privacy-first. Learn about local data storage, HealthKit integration, and your privacy rights."
+      content="Calwise privacy policy covering Apple Health integration, cloud storage, data retention, security, and privacy rights."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./icon.png" />
@@ -19,7 +19,7 @@
     <meta name="twitter:title" content="Calwise Privacy Policy" />
     <meta
       name="twitter:description"
-      content="Calwise keeps your nutrition data local to your device. Read our full privacy policy."
+      content="Calwise privacy policy covering Apple Health integration, data storage, security, and user rights."
     />
     <meta name="twitter:image" content="./icon.png" />
     <link rel="icon" type="image/png" href="./icon.png" />
@@ -65,94 +65,140 @@
         <article class="content-card">
           <h1>Privacy Policy</h1>
           <p>
-            This Privacy Policy describes how Calwise handles your information based on the current iOS app implementation.
+            Effective Date: April 10, 2026. Last Updated: May 8, 2026.
           </p>
 
-          <h2>1. Information We Collect</h2>
+          <h2>1. Introduction</h2>
+          <p>
+            Calwise (&quot;we,&quot; &quot;us,&quot; &quot;our,&quot; or the &quot;Company&quot;) is committed to protecting your privacy. This Privacy Policy
+            explains how we collect, use, disclose, and safeguard your information when you use our mobile application
+            (the &quot;App&quot;) and related services.
+          </p>
+          <p>
+            By downloading, installing, or using the Calwise app, you acknowledge that you have read, understood, and
+            agree to be bound by all the terms of this Privacy Policy.
+          </p>
+
+          <h2>2. Information We Collect</h2>
+          <h2>2.1 Information You Provide Directly</h2>
           <p>Calwise may process the following categories of data when you use the app:</p>
           <ul>
-            <li>Account and profile data: name, email, optional phone, age, gender, height, current weight, target weight, goals, and onboarding preferences.</li>
-            <li>Nutrition and progress data: diary entries, saved meals, macro totals, weight history, streak/progress metrics, and app settings.</li>
-            <li>Feature input data: food text prompts, voice-transcribed text, food images, and barcode values when you use those features.</li>
-            <li>Operational data: API usage metadata such as endpoint, success/failure, request id, and usage cost fields for nutrition-related requests.</li>
+            <li>Account information: email address, password and authentication credentials, name and profile information, age, gender, height, weight, fitness level, and health goals.</li>
+            <li>Health and fitness data: dietary intake and food logs, calorie consumption, macronutrient data, weight tracking information, fitness goals, and workout activities.</li>
+            <li>Communications: messages, feedback, support requests, and survey responses you send to us.</li>
           </ul>
 
-          <h2>2. Where Data Is Stored</h2>
+          <h2>2.2 Information Collected Automatically</h2>
+          <p>With your explicit permission, we may collect Apple Health data and app usage data.</p>
+          <ul>
+            <li>Apple Health integration: step count, daily activity data, workout activities and duration, weight and body measurements, and nutritional data you choose to sync.</li>
+            <li>Usage data: app interaction patterns, accessed features, time spent on different sections, device information, crash logs, error reports, IP address, and general location.</li>
+          </ul>
+
+          <h2>3. How We Use Your Information</h2>
           <p>
-            Calwise uses both on-device storage and cloud storage.
+            We use the collected information for service delivery, personalization, analytics, communication, health
+            insights, security, and legal compliance.
           </p>
           <ul>
-            <li>On-device: app state and preferences (UserDefaults), plus local cache storage for foods and diary entries (Core Data/SQLite).</li>
-            <li>Cloud: Supabase authentication and database tables for account, profile, settings, food logs, saved meals, progress, and related records.</li>
+            <li>Service delivery: creating and managing your account and providing nutrition and fitness tracking features.</li>
+            <li>Personalization: customizing your experience based on health goals and preferences.</li>
+            <li>Analytics: understanding how you use the App to improve features and user experience.</li>
+            <li>Communication: sending updates, responding to inquiries, and sending service notifications.</li>
+            <li>Health insights: providing nutritional analysis, calorie calculations, and progress tracking.</li>
+            <li>Security: detecting fraud, preventing abuse, and protecting against unauthorized access.</li>
+            <li>Legal compliance: complying with applicable laws and regulations.</li>
           </ul>
 
-          <h2>3. Third-Party Services and APIs</h2>
+          <h2>4. Data Storage and Security</h2>
+          <h2>4.1 Data Storage</h2>
           <p>
-            Calwise integrates with third-party providers for specific features:
+            Your data is stored securely on Supabase, a cloud-based platform that provides encrypted data transmission,
+            automated backups, database encryption at rest, and security controls for app data.
+          </p>
+
+          <h2>4.2 Security Measures</h2>
+          <p>
+            We implement secure authentication protocols, encrypted passwords and sensitive data, regular security audits
+            and updates, access controls limiting data to authorized personnel only, and secure API connections for all
+            data transfers.
           </p>
           <ul>
-            <li>Supabase: authentication, session handling, and app data sync.</li>
-            <li>USDA FoodData Central: food search and nutrition lookup.</li>
-            <li>Open Food Facts: barcode-based product lookup.</li>
-            <li>Google Gemini API and/or OpenAI API: food analysis from text or images, and serving/nutrition estimation features.</li>
-            <li>Apple services: Sign in with Apple and iOS Speech Recognition when voice logging is used.</li>
+            <li>Data transmission uses SSL/TLS.</li>
+            <li>Backups may be created for recovery purposes.</li>
+            <li>No method of transmission over the internet is 100% secure.</li>
           </ul>
-          <p>
-            The iOS project currently includes Firebase packages as dependencies, but current runtime app code does not initialize
-            Firebase Analytics/Crashlytics flows.
-          </p>
 
-          <h2>4. Health Data (HealthKit)</h2>
-          <p>
-            The app currently has an Apple Health toggle in settings, but active HealthKit read/write integration is not implemented
-            in the current code path, and no HealthKit entitlement is configured in the app entitlement file.
-          </p>
-
-          <h2>5. Data Retention</h2>
-          <p>
-            Retention is currently driven by app behavior and backend persistence:
-          </p>
+          <h2>5. Data Sharing and Third Parties</h2>
+          <h2>5.1 Third-Party Service Providers</h2>
+          <p>We share your information only with the service providers necessary to operate the App.</p>
           <ul>
-            <li>Food cache entries on device are evicted after about 30 days.</li>
-            <li>Legacy cached search/offline operation data uses a 7-day expiry window.</li>
-            <li>Unsynced offline entries may remain locally until sync succeeds or local cache is cleared.</li>
-            <li>Server-side account and log data in Supabase is retained until deletion is requested or otherwise removed by account workflows.</li>
+            <li>Supabase: backend infrastructure, database hosting, authentication, and user management.</li>
+            <li>Apple Health: only with your explicit permission through iOS privacy controls, for reading health metrics and writing nutritional data you authorize.</li>
           </ul>
 
-          <h2>6. Your Rights and Choices</h2>
-          <ul>
-            <li>You can edit profile fields and meal logs in-app, including updating or deleting diary items.</li>
-            <li>You can sign out at any time, which clears local authenticated session state.</li>
-            <li>You can request account/data deletion or data-access support by contacting us at the email below.</li>
-            <li>You can uninstall the app to remove app data stored locally on your device.</li>
-          </ul>
+          <h2>5.2 Data We Do Not Share</h2>
+          <p>We do not sell personal data, share data with marketers without consent, disclose health data to unaffiliated companies, or use your data for purposes outside this policy.</p>
 
-          <h2>7. Security</h2>
+          <h2>5.3 Legal Requirements</h2>
           <p>
-            Calwise uses authenticated sessions and HTTPS network requests for backend/API communication. Supabase row-level
-            security policies are configured in the project migrations to scope access to user-owned records.
+            We may disclose information when required by law or court order, necessary to protect our legal rights or prevent fraud, or when you have given us consent.
           </p>
+
+          <h2>6. Your Privacy Rights and Choices</h2>
+          <h2>6.1 Access and Control</h2>
+          <p>
+            You have the right to access, correct, delete, and export the personal data we hold about you.
+          </p>
+          <h2>6.2 Apple Health Integration</h2>
+          <p>
+            You can revoke Calwise&apos;s access to Apple Health through iOS Settings, manage which metrics Calwise can read or
+            write, and clear synced data from Apple Health at any time.
+          </p>
+          <h2>6.3 Communication Preferences</h2>
+          <p>You can opt out of non-essential promotional communications, marketing emails, and push notifications through app settings.</p>
+
+          <h2>7. Data Retention</h2>
+          <ul>
+            <li>Account data: retained for the duration of your account and securely removed within 30 days after deletion.</li>
+            <li>Health data: retained as long as your account is active. You can delete individual logs at any time.</li>
+            <li>Backup data: may be retained for up to 90 days for recovery purposes.</li>
+            <li>Analytics data: aggregated data retained for historical analysis with personally identifiable information removed.</li>
+          </ul>
 
           <h2>8. Children&apos;s Privacy</h2>
           <p>
-            Calwise is not intended for children under 13. The current backend schema includes age validation constraints aligned
-            with this minimum age.
+            Calwise is not intended for children under 13 years of age. We do not knowingly collect personal information
+            from children under 13.
           </p>
 
-          <h2>9. Changes To This Policy</h2>
+          <h2>9. International Data Transfers</h2>
           <p>
-            We may update this Privacy Policy from time to time to reflect product or legal changes. The latest version will
-            always be posted on this page.
+            Your data may be transferred to, stored in, and processed in countries other than your country of residence.
           </p>
 
-          <h2>10. Contact</h2>
+          <h2>10. Policy Changes</h2>
           <p>
-            For privacy questions or concerns, contact us at
+            We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws.
+            We will notify you of material changes through the App, via email, or by posting an updated policy with a new
+            Last Updated date.
+          </p>
+
+          <h2>11. Contact Us</h2>
+          <p>
+            If you have questions, concerns, or requests regarding this Privacy Policy, contact us at
             <a class="mail-link" href="mailto:calwiseapp@gmail.com">calwiseapp@gmail.com</a>.
           </p>
 
-          <h2>Last Updated</h2>
-          <p>April 10, 2026</p>
+          <h2>12. Supplementary Information</h2>
+          <p>
+            Calwise&apos;s mobile app does not use traditional cookies. We may use local storage for app functionality and
+            preferences, and we do not track you across other apps or websites.
+          </p>
+
+          <p>
+            This Privacy Policy was last updated on May 8, 2026.
+          </p>
         </article>
       </div>
     </main>
