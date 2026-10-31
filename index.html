@@ -3,23 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calwise | Track smarter. Eat better.</title>
+    <title>Calwise | Your everyday meals. Finally understood.</title>
     <meta
       name="description"
-      content="Calwise is a clean, iOS-first calorie tracker that helps you log meals fast, monitor macros, and stay consistent every day."
+      content="Calwise is the Indian-first calorie tracker for iPhone. Log meals by voice or photo, track your macros, and understand your everyday eating habits."
     />
-    <meta property="og:title" content="Calwise | Track smarter. Eat better." />
+    <meta property="og:title" content="Calwise | Your everyday meals. Finally understood." />
     <meta
       property="og:description"
-      content="Smart calorie tracking for iPhone. Log meals in seconds, view macros at a glance, and hit your daily goals."
+      content="From dal chawal to your favourite homemade meals — track calories and macros the Indian way. Download Calwise on the App Store."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./app-screenshot.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Calwise | Track smarter. Eat better." />
+    <meta name="twitter:title" content="Calwise | Your everyday meals. Finally understood." />
     <meta
       name="twitter:description"
-      content="Smart calorie tracking for iPhone with effortless meal logging and macro insights."
+      content="Indian-first calorie tracker for iPhone. Log meals by voice or photo, track macros, sync with Apple Health."
     />
     <meta name="twitter:image" content="./app-screenshot.png" />
     <link rel="icon" type="image/png" href="./icon.png" />
@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+
+    <!-- ── Navigation ─────────────────────────────────────── -->
     <header class="site-header" id="siteHeader">
       <div class="container nav-wrap">
         <a href="./index.html" class="brand" aria-label="Calwise home">
@@ -47,9 +49,22 @@
         </button>
 
         <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="./index.html">Home</a>
+          <a href="./index.html" aria-current="page">Home</a>
           <a href="./privacy-policy.html">Privacy Policy</a>
           <a href="./contact.html">Contact Us</a>
+          <a
+            href="https://apps.apple.com/in/app/calwise-indian-calorie-tracker/id6761990106"
+            class="nav-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <!-- App Store icon -->
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/>
+              <path d="M12 8v8m-4-4h8"/>
+            </svg>
+            Download
+          </a>
         </nav>
       </div>
 
@@ -57,20 +72,35 @@
         <a href="./index.html">Home</a>
         <a href="./privacy-policy.html">Privacy Policy</a>
         <a href="./contact.html">Contact Us</a>
+        <a
+          href="https://apps.apple.com/in/app/calwise-indian-calorie-tracker/id6761990106"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Download on App Store</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero section reveal">
+
+      <!-- ── Section A — Hero ──────────────────────────────── -->
+      <section class="hero section" id="hero">
         <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Calorie Tracking For iPhone</p>
-            <h1>Track smarter. Eat better.</h1>
-            <p class="lead">
-              Calwise helps you stay on top of calories and macros with a fast, beautifully simple flow that feels right
-              at home on iOS.
+
+          <div class="hero-copy" id="heroCopy">
+            <p class="eyebrow hero-anim">Calorie Tracking, Made for Indian Food</p>
+            <h1 class="hero-anim">Your everyday meals. Finally understood.</h1>
+            <p class="lead hero-anim">
+              From ek katori dal chawal to your favourite homemade meals, log what you
+              eat by voice or photo and keep your calories and macros in perspective.
             </p>
-            <a class="app-store-badge" href="#" aria-label="Download on the App Store">
+            <a
+              class="app-store-badge hero-anim"
+              href="https://apps.apple.com/in/app/calwise-indian-calorie-tracker/id6761990106"
+              aria-label="Download on the App Store"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
                 alt="Download on the App Store"
@@ -78,143 +108,665 @@
             </a>
           </div>
 
-          <div class="phone-stage" aria-hidden="true">
-            <div class="iphone-frame">
-              <img src="./app-screenshot.png" alt="Calwise app screenshot" class="screen-shot" loading="lazy" />
-              <div class="phone-glow"></div>
+          <div class="phone-stage" aria-hidden="true" id="phoneStage">
+            <div class="phone-glow-bg"></div>
+            <div class="phone-wrap" id="heroPhone">
+              <!-- Floating chips -->
+              <div class="chip chip-1">
+                <span class="chip-dot" style="background:#FF8A00;"></span>
+                Dal Chawal &mdash; 380 kcal
+              </div>
+              <div class="chip chip-2">
+                <span class="chip-dot" style="background:#34C759;"></span>
+                Protein &middot; 28g
+              </div>
+              <div class="chip chip-3">
+                <span class="chip-dot" style="background:#007AFF;"></span>
+                Today &middot; 1,840 kcal
+              </div>
+
+              <div class="iphone-frame">
+                <img
+                  src="./app-screenshot.png"
+                  alt="Calwise app interface showing meal tracking"
+                  class="screen-shot"
+                  loading="eager"
+                />
+              </div>
             </div>
           </div>
+
         </div>
       </section>
 
-      <section class="section reveal">
+      <!-- ── Section B — Indian Food First (Dark) ─────────── -->
+      <section class="section section-dark" id="sectionIndian">
         <div class="container">
-          <h2>Built for everyday consistency</h2>
-          <div class="features-grid">
-            <article class="card feature-card">
-              <h3>🥗 Smart Calorie Tracking</h3>
-              <p>Log meals in seconds with an interface designed for quick, repeatable daily use.</p>
-            </article>
-            <article class="card feature-card">
-              <h3>📊 Macro Breakdown</h3>
-              <p>See protein, carbs, and fats at a glance so your nutrition choices stay intentional.</p>
-            </article>
-            <article class="card feature-card">
-              <h3>📅 Daily Progress</h3>
-              <p>Stay consistent with a weekly view that keeps momentum visible and goals within reach.</p>
-            </article>
+
+          <div class="section-header gsap-reveal">
+            <span class="section-label">Indian Food First</span>
+            <h2>Dal chawal doesn't come with a barcode.</h2>
+            <p>
+              Your meals are more than packaged food. Calwise makes it easier to understand
+              everyday Indian portions and homemade dishes.
+            </p>
+          </div>
+
+          <div class="steps-flow" id="stepsFlow">
+
+            <div class="step-card gsap-reveal">
+              <div class="step-number">01</div>
+              <div class="step-content">
+                <h3>Say what you ate or capture a photo</h3>
+                <p>Log your meal by voice description or snap a plate photo in seconds.</p>
+              </div>
+              <svg class="step-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,138,0,0.6)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                <line x1="12" y1="19" x2="12" y2="23"/>
+                <line x1="8" y1="23" x2="16" y2="23"/>
+              </svg>
+            </div>
+
+            <div class="step-card gsap-reveal">
+              <div class="step-number">02</div>
+              <div class="step-content">
+                <h3>Log the meal</h3>
+                <p>Calwise understands everyday Indian portions and homemade dishes.</p>
+              </div>
+              <svg class="step-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,138,0,0.6)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+
+            <div class="step-card gsap-reveal">
+              <div class="step-number">03</div>
+              <div class="step-content">
+                <h3>Understand its calorie &amp; macro breakdown</h3>
+                <p>See protein, carbs, and fats in perspective so every meal stays intentional.</p>
+              </div>
+              <svg class="step-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,138,0,0.6)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a10 10 0 0 1 7.07 17.07"/>
+                <line x1="12" y1="12" x2="12" y2="2"/>
+              </svg>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <section class="stats-strip reveal" aria-label="Calwise stats">
-        <div class="container stats-grid">
-          <p><strong> Set your calorie goals</strong></p>
-          <p><strong>Track Protein, Carbs &amp; Fats</strong></p>
-          <p><strong>Built for iOS 26</strong></p>
+      <!-- ── Section C — Features ──────────────────────────── -->
+      <section class="section" id="sectionFeatures">
+        <div class="container">
+
+          <div class="section-header text-center gsap-reveal" style="margin-inline: auto;">
+            <span class="section-label" style="display:block; margin-bottom:8px;">Features</span>
+            <h2>Built around how you actually eat.</h2>
+            <p style="margin-top:12px; max-width:52ch; margin-inline:auto;">
+              Everything you need to understand your nutrition — and nothing you don't.
+            </p>
+          </div>
+
+          <div class="features-grid" id="featuresGrid">
+
+            <!-- Feature 1: Smart Meal Logging -->
+            <article class="feature-card gsap-reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                  <line x1="12" y1="19" x2="12" y2="23"/>
+                  <line x1="8" y1="23" x2="16" y2="23"/>
+                </svg>
+              </div>
+              <h3>Smart Meal Logging</h3>
+              <p>Log meals through voice or photo without making food tracking feel tedious.</p>
+              <div class="card-visual visual-voice" aria-hidden="true">
+                <div class="voice-badge">
+                  <span class="voice-bar"></span>
+                  <span class="voice-bar"></span>
+                  <span class="voice-bar"></span>
+                  <span class="voice-bar"></span>
+                  <span class="voice-bar"></span>
+                </div>
+                <span class="visual-text">&ldquo;2 rotis, dal tadka &amp; dahi&rdquo;</span>
+              </div>
+            </article>
+
+            <!-- Feature 2: Indian Food Tracking -->
+            <article class="feature-card gsap-reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                  <line x1="6" y1="1" x2="6" y2="4"/>
+                  <line x1="10" y1="1" x2="10" y2="4"/>
+                  <line x1="14" y1="1" x2="14" y2="4"/>
+                </svg>
+              </div>
+              <h3>Indian Food Tracking</h3>
+              <p>Track everyday Indian meals, homemade dishes and portions.</p>
+              <div class="card-visual visual-food" aria-hidden="true">
+                <div class="food-tag">
+                  <span>Moong Dal Khichdi</span>
+                  <span class="food-cals">290 kcal &middot; 1 bowl</span>
+                </div>
+                <div class="food-tag">
+                  <span>Paneer Bhurji</span>
+                  <span class="food-cals">240 kcal &middot; 150g</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Feature 3: Calories & Macros -->
+            <article class="feature-card gsap-reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 2v10l6.5 3.8"/>
+                </svg>
+              </div>
+              <h3>Calories &amp; Macros</h3>
+              <p>Understand your calorie intake and protein, carbohydrates and fats in one place.</p>
+              <div class="card-visual" aria-hidden="true">
+                <div class="macro-bar">
+                  <div class="macro-bar-fill protein" style="width: 30%;"></div>
+                  <div class="macro-bar-fill carbs" style="width: 50%;"></div>
+                  <div class="macro-bar-fill fats" style="width: 20%;"></div>
+                </div>
+                <div class="macro-legend">
+                  <span><strong style="color:var(--c-orange);">Protein</strong> 52g</span>
+                  <span><strong style="color:#FFA23A;">Carbs</strong> 145g</span>
+                  <span><strong style="color:#34C759;">Fats</strong> 34g</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Feature 4: Daily Progress -->
+            <article class="feature-card gsap-reveal">
+              <div class="feature-icon-wrap" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"/>
+                  <line x1="12" y1="20" x2="12" y2="4"/>
+                  <line x1="6" y1="20" x2="6" y2="14"/>
+                  <line x1="2" y1="20" x2="22" y2="20"/>
+                </svg>
+              </div>
+              <h3>Daily Progress</h3>
+              <p>See your progress against personalised goals and understand your eating habits.</p>
+              <div class="card-visual" aria-hidden="true">
+                <div class="progress-week">
+                  <div class="day-col"><span class="day-dot done"></span><span class="day-lbl">M</span></div>
+                  <div class="day-col"><span class="day-dot done"></span><span class="day-lbl">T</span></div>
+                  <div class="day-col"><span class="day-dot done"></span><span class="day-lbl">W</span></div>
+                  <div class="day-col"><span class="day-dot done"></span><span class="day-lbl">T</span></div>
+                  <div class="day-col"><span class="day-dot done"></span><span class="day-lbl">F</span></div>
+                  <div class="day-col"><span class="day-dot done"></span><span class="day-lbl">S</span></div>
+                  <div class="day-col"><span class="day-dot active"></span><span class="day-lbl">S</span></div>
+                </div>
+                <span class="streak-text">🔥 6-day target streak</span>
+              </div>
+            </article>
+
+          </div>
         </div>
       </section>
 
-      <section class="section cta-section reveal">
-        <div class="container cta-wrap">
-          <h2>Start building better nutrition habits today</h2>
-          <p>Download Calwise and make calorie tracking feel effortless from day one.</p>
-          <a class="app-store-badge" href="#" aria-label="Download on the App Store">
-            <img
-              src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
-              alt="Download on the App Store"
-            />
-          </a>
+      <!-- ── Section D — Product Showcase ─────────────────── -->
+      <section class="section showcase-section" id="sectionShowcase">
+        <div class="container">
+          <div class="section-header text-center gsap-reveal" style="margin-inline: auto;">
+            <span class="section-label" style="display:block; margin-bottom:8px;">The App</span>
+            <h2>A closer look.</h2>
+            <p style="margin-top:12px; max-width:46ch; margin-inline:auto;">
+              Designed for iPhone. Built for real life.
+            </p>
+          </div>
+
+          <div class="showcase-stage" id="showcaseStage" aria-hidden="true">
+
+            <!-- Left phone (angled) -->
+            <div class="showcase-phone-left gsap-reveal">
+              <div class="iphone-frame">
+                <img
+                  src="./app-screenshot.png"
+                  alt=""
+                  class="screen-shot"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <!-- Center phone (main) -->
+            <div class="showcase-phone-wrap gsap-reveal" id="showcasePhone">
+              <div class="iphone-frame">
+                <img
+                  src="./app-screenshot.png"
+                  alt="Calwise app interface"
+                  class="screen-shot"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <!-- Right phone (angled) -->
+            <div class="showcase-phone-right gsap-reveal">
+              <div class="iphone-frame">
+                <img
+                  src="./app-screenshot.png"
+                  alt=""
+                  class="screen-shot"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+          </div>
+
+          <div class="showcase-features-pillrow gsap-reveal">
+            <span class="showcase-pill">Home &amp; Calorie Ring</span>
+            <span class="showcase-pill">Voice &amp; Photo Logging</span>
+            <span class="showcase-pill">Macro Breakdown</span>
+            <span class="showcase-pill">Progress Dashboard</span>
+          </div>
         </div>
       </section>
+
+      <!-- ── Section E — Apple Health ─────────────────────── -->
+      <section class="section health-section" id="sectionHealth">
+        <div class="container">
+          <div class="health-card gsap-reveal">
+
+            <div class="health-badge" aria-hidden="true">
+              <!-- Apple Health–style heart with activity ring SVG -->
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="16" cy="16" r="14" stroke="#E8E8E8" stroke-width="3"/>
+                <circle cx="16" cy="16" r="14" stroke="url(#actRing)" stroke-width="3" stroke-dasharray="64 88" stroke-linecap="round" transform="rotate(-90 16 16)"/>
+                <path d="M16 22s-6-4.35-6-8.5A4 4 0 0 1 16 10.5 4 4 0 0 1 22 13.5C22 17.65 16 22 16 22z" fill="#FF3B30"/>
+                <defs>
+                  <linearGradient id="actRing" x1="16" y1="2" x2="30" y2="16" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FF3B30"/>
+                    <stop offset="1" stop-color="#FF8A00"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span>Apple Health</span>
+            </div>
+
+            <h2>Your progress, with the bigger picture.</h2>
+            <p>
+              With Apple Health integration, your calorie budget can account for your actual activity and workouts.
+            </p>
+
+            <!-- Calorie Ring -->
+            <div class="calorie-ring-wrap">
+              <svg
+                class="calorie-ring-svg"
+                id="calorieRingSvg"
+                width="120"
+                height="120"
+                viewBox="0 0 120 120"
+                aria-label="Calorie progress ring showing 75% of daily goal"
+                role="img"
+              >
+                <circle class="ring-track" cx="60" cy="60" r="50"/>
+                <circle class="ring-fill" id="ringFill" cx="60" cy="60" r="50"/>
+                <text x="60" y="56" text-anchor="middle" font-family="-apple-system, sans-serif" font-weight="800" font-size="18" fill="#171717">75%</text>
+                <text x="60" y="72" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" fill="#77716B">of goal</text>
+              </svg>
+
+              <div class="ring-labels">
+                <span class="ring-label-main">1,840</span>
+                <span class="ring-label-sub">kcal consumed today</span>
+                <span class="ring-label-sub" style="margin-top:8px; font-weight:600; color:#FF8A00;">260 kcal remaining</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Section F — CTA ───────────────────────────────── -->
+      <section class="cta-section" id="sectionCta">
+        <div class="container">
+          <div class="cta-wrap gsap-reveal">
+            <div class="cta-product-visual" aria-hidden="true">
+              <img src="./icon.png" alt="Calwise app icon" class="cta-app-icon" />
+            </div>
+            <h2>Make room for better eating habits.</h2>
+            <p class="lead">Your meals. Your goals. A clearer picture of every day.</p>
+            <a
+              class="app-store-badge"
+              href="https://apps.apple.com/in/app/calwise-indian-calorie-tracker/id6761990106"
+              aria-label="Get Calwise on the App Store"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+                alt="Download on the App Store"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
 
+    <!-- ── Footer ────────────────────────────────────────── -->
     <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p>© 2026 Calwise. All rights reserved.</p>
-        <nav aria-label="Footer links">
-          <a href="./index.html">Home</a>
-          <span aria-hidden="true">·</span>
-          <a href="./privacy-policy.html">Privacy Policy</a>
-          <span aria-hidden="true">·</span>
-          <a href="./contact.html">Contact Us</a>
-        </nav>
+      <div class="container">
+        <div class="footer-inner">
+          <a href="./index.html" class="footer-brand" aria-label="Calwise home">
+            <img src="./icon.png" alt="Calwise logo" class="brand-logo" />
+            <span>Calwise</span>
+          </a>
+
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="./index.html">Home</a>
+            <a href="./privacy-policy.html">Privacy Policy</a>
+            <a href="./contact.html">Contact Us</a>
+            <a
+              href="https://apps.apple.com/in/app/calwise-indian-calorie-tracker/id6761990106"
+              target="_blank"
+              rel="noopener noreferrer"
+            >App Store</a>
+          </nav>
+        </div>
+        <p class="footer-copy">© 2026 Calwise. All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- ── GSAP ──────────────────────────────────────────── -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
     <script>
-      (function () {
-        var header = document.getElementById('siteHeader');
-        var menuToggle = document.getElementById('menuToggle');
-        var mobileNav = document.getElementById('mobileNav');
+    (function () {
+      'use strict';
 
-        function updateHeader() {
-          if (!header) {
-            return;
-          }
-          if (window.scrollY > 8) {
-            header.classList.add('is-scrolled');
-          } else {
-            header.classList.remove('is-scrolled');
-          }
-        }
+      /* ── Header scroll ─────────────────────────────────── */
+      var header      = document.getElementById('siteHeader');
+      var menuToggle  = document.getElementById('menuToggle');
+      var mobileNav   = document.getElementById('mobileNav');
 
-        function closeMobileMenu() {
-          if (!menuToggle || !mobileNav) {
-            return;
-          }
-          menuToggle.setAttribute('aria-expanded', 'false');
-          mobileNav.classList.remove('is-open');
-        }
-
-        if (menuToggle && mobileNav) {
-          menuToggle.addEventListener('click', function () {
-            var expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            menuToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-            mobileNav.classList.toggle('is-open');
-          });
-
-          mobileNav.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', closeMobileMenu);
-          });
-
-          window.addEventListener('resize', function () {
-            if (window.innerWidth > 768) {
-              closeMobileMenu();
-            }
-          });
-        }
-
-        window.addEventListener('scroll', updateHeader, { passive: true });
-        updateHeader();
-
-        var sections = document.querySelectorAll('.reveal');
-        if ('IntersectionObserver' in window) {
-          var observer = new IntersectionObserver(
-            function (entries, io) {
-              entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add('is-visible');
-                  io.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: 0.14, rootMargin: '0px 0px -40px 0px' }
-          );
-
-          sections.forEach(function (section) {
-            observer.observe(section);
-          });
+      function updateHeader() {
+        if (!header) return;
+        if (window.scrollY > 8) {
+          header.classList.add('is-scrolled');
         } else {
-          sections.forEach(function (section) {
-            section.classList.add('is-visible');
-          });
+          header.classList.remove('is-scrolled');
         }
-      })();
+      }
+
+      window.addEventListener('scroll', updateHeader, { passive: true });
+      updateHeader();
+
+      /* ── Mobile menu ───────────────────────────────────── */
+      function closeMobileMenu() {
+        if (!menuToggle || !mobileNav) return;
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('is-open');
+      }
+
+      if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', function () {
+          var expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+          menuToggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          mobileNav.classList.toggle('is-open');
+        });
+
+        mobileNav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', closeMobileMenu);
+        });
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 768) closeMobileMenu();
+        });
+      }
+
+      /* ── Reduced-motion check ──────────────────────────── */
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReducedMotion) {
+        /* Remove hidden state from all gsap-reveal elements */
+        document.querySelectorAll('.gsap-reveal, .hero-anim').forEach(function (el) {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        });
+        /* Animate ring immediately */
+        var ringFill = document.getElementById('ringFill');
+        if (ringFill) ringFill.classList.add('is-visible');
+        return; /* Skip GSAP */
+      }
+
+      /* ── GSAP setup ────────────────────────────────────── */
+      if (typeof gsap === 'undefined') return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      /* ── Hero entrance ─────────────────────────────────── */
+      /* Hero elements use .hero-anim (not .gsap-reveal) so no CSS pre-hide conflict */
+      var heroTl = gsap.timeline({ delay: 0.1 });
+
+      heroTl
+        .from('.hero-anim', {
+          y: 28, opacity: 0, duration: 0.65, stagger: 0.12, ease: 'power3.out',
+          clearProps: 'all'
+        })
+        .from('#heroPhone', {
+          scale: 0.92, opacity: 0, duration: 0.9, ease: 'power3.out',
+          clearProps: 'all'
+        }, '-=0.6')
+        .from('.chip', {
+          y: 12, opacity: 0, duration: 0.5, stagger: 0.12, ease: 'power2.out',
+          clearProps: 'transform,opacity'
+        }, '-=0.5');
+
+      /* ── Section B — Indian Food steps ─────────────────── */
+      gsap.utils.toArray('#stepsFlow .step-card').forEach(function (card, i) {
+        gsap.fromTo(card,
+          { y: 36, opacity: 0 },
+          {
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 88%',
+              once: true
+            },
+            y: 0,
+            opacity: 1,
+            duration: 0.65,
+            delay: i * 0.1,
+            ease: 'power3.out'
+          }
+        );
+      });
+
+      gsap.fromTo('#sectionIndian .section-header',
+        { y: 32, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '#sectionIndian .section-header',
+            start: 'top 88%',
+            once: true
+          },
+          y: 0, opacity: 1, duration: 0.7, ease: 'power3.out'
+        }
+      );
+
+      /* ── Section C — Feature cards ──────────────────────── */
+      gsap.fromTo('#featuresGrid .feature-card',
+        { y: 40, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '#featuresGrid',
+            start: 'top 82%',
+            once: true
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.65,
+          stagger: 0.08,
+          ease: 'power3.out'
+        }
+      );
+
+      gsap.fromTo('#sectionFeatures .section-header',
+        { y: 28, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '#sectionFeatures .section-header',
+            start: 'top 88%',
+            once: true
+          },
+          y: 0, opacity: 1, duration: 0.65, ease: 'power3.out'
+        }
+      );
+
+      /* ── Section D — Showcase parallax ─────────────────── */
+      gsap.fromTo('#sectionShowcase .section-header',
+        { y: 28, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '#sectionShowcase .section-header',
+            start: 'top 88%',
+            once: true
+          },
+          y: 0, opacity: 1, duration: 0.65, ease: 'power3.out'
+        }
+      );
+
+      gsap.fromTo('.showcase-phone-wrap',
+        { y: 48, opacity: 0, scale: 0.94 },
+        {
+          scrollTrigger: {
+            trigger: '#showcaseStage',
+            start: 'top 85%',
+            once: true
+          },
+          y: 0, opacity: 1, scale: 1, duration: 0.9, ease: 'power3.out'
+        }
+      );
+
+      gsap.fromTo('.showcase-phone-left',
+        { x: -40, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '#showcaseStage',
+            start: 'top 85%',
+            once: true
+          },
+          x: 0, opacity: 1, duration: 0.8, delay: 0.15, ease: 'power3.out'
+        }
+      );
+
+      gsap.fromTo('.showcase-phone-right',
+        { x: 40, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '#showcaseStage',
+            start: 'top 85%',
+            once: true
+          },
+          x: 0, opacity: 1, duration: 0.8, delay: 0.15, ease: 'power3.out'
+        }
+      );
+
+      /* Parallax on center phone */
+      gsap.to('#showcasePhone', {
+        scrollTrigger: {
+          trigger: '#sectionShowcase',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1.2
+        },
+        y: -40,
+        ease: 'none'
+      });
+
+      /* ── Section E — Health card & calorie ring ──────────── */
+      gsap.fromTo('.health-card',
+        { y: 36, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '.health-card',
+            start: 'top 85%',
+            once: true
+          },
+          y: 0, opacity: 1, duration: 0.75, ease: 'power3.out'
+        }
+      );
+
+      /* Calorie ring stroke animation */
+      ScrollTrigger.create({
+        trigger: '#calorieRingSvg',
+        start: 'top 88%',
+        once: true,
+        onEnter: function () {
+          var ringEl = document.getElementById('ringFill');
+          if (ringEl) ringEl.classList.add('is-visible');
+        }
+      });
+
+      /* ── Section F — CTA ────────────────────────────────── */
+      gsap.fromTo('.cta-wrap',
+        { y: 32, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '.cta-wrap',
+            start: 'top 88%',
+            once: true
+          },
+          y: 0, opacity: 1, duration: 0.75, ease: 'power3.out'
+        }
+      );
+
+      /* ── Generic gsap-reveal elements (catch-all) ────────── */
+      document.querySelectorAll('.gsap-reveal').forEach(function (el) {
+        /* Skip elements already explicitly animated above */
+        if (
+          el.closest('.hero-copy') ||
+          el.closest('#heroPhone') ||
+          el.classList.contains('hero-anim') ||
+          el.closest('#stepsFlow') ||
+          el.closest('#featuresGrid') ||
+          el.classList.contains('section-header') ||
+          el.classList.contains('health-card') ||
+          el.classList.contains('cta-wrap') ||
+          el.classList.contains('showcase-phone-wrap') ||
+          el.classList.contains('showcase-phone-left') ||
+          el.classList.contains('showcase-phone-right')
+        ) return;
+
+        gsap.fromTo(el,
+          { y: 28, opacity: 0 },
+          {
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 88%',
+              once: true
+            },
+            y: 0,
+            opacity: 1,
+            duration: 0.65,
+            ease: 'power3.out'
+          }
+        );
+      });
+
+    }());
     </script>
+
+    <!-- Vercel Analytics -->
     <script>
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+
   </body>
 </html>
