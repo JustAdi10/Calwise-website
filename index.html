@@ -109,7 +109,6 @@
           </div>
 
           <div class="phone-stage" aria-hidden="true" id="phoneStage">
-            <div class="phone-glow-bg"></div>
             <div class="phone-wrap" id="heroPhone">
               <!-- Floating chips -->
               <div class="chip chip-1">
@@ -556,22 +555,22 @@
 
       heroTl
         .from('.hero-anim', {
-          y: 28, opacity: 0, duration: 0.65, stagger: 0.12, ease: 'power3.out',
+          y: 24, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
           clearProps: 'all'
         })
         .from('#heroPhone', {
-          scale: 0.92, opacity: 0, duration: 0.9, ease: 'power3.out',
+          y: 20, opacity: 0, duration: 0.7, ease: 'power3.out',
           clearProps: 'all'
-        }, '-=0.6')
+        }, '-=0.4')
         .from('.chip', {
-          y: 12, opacity: 0, duration: 0.5, stagger: 0.12, ease: 'power2.out',
+          y: 8, opacity: 0, duration: 0.4, stagger: 0.08, ease: 'power2.out',
           clearProps: 'transform,opacity'
-        }, '-=0.5');
+        }, '-=0.35');
 
       /* ── Section B — Indian Food steps ─────────────────── */
       gsap.utils.toArray('#stepsFlow .step-card').forEach(function (card, i) {
         gsap.fromTo(card,
-          { y: 36, opacity: 0 },
+          { y: 24, opacity: 0 },
           {
             scrollTrigger: {
               trigger: card,
@@ -580,125 +579,113 @@
             },
             y: 0,
             opacity: 1,
-            duration: 0.65,
-            delay: i * 0.1,
+            duration: 0.55,
+            delay: i * 0.08,
             ease: 'power3.out'
           }
         );
       });
 
       gsap.fromTo('#sectionIndian .section-header',
-        { y: 32, opacity: 0 },
+        { y: 24, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '#sectionIndian .section-header',
             start: 'top 88%',
             once: true
           },
-          y: 0, opacity: 1, duration: 0.7, ease: 'power3.out'
+          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out'
         }
       );
 
       /* ── Section C — Feature cards ──────────────────────── */
       gsap.fromTo('#featuresGrid .feature-card',
-        { y: 40, opacity: 0 },
+        { y: 28, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '#featuresGrid',
-            start: 'top 82%',
+            start: 'top 85%',
             once: true
           },
           y: 0,
           opacity: 1,
-          duration: 0.65,
-          stagger: 0.08,
+          duration: 0.55,
+          stagger: 0.06,
           ease: 'power3.out'
         }
       );
 
       gsap.fromTo('#sectionFeatures .section-header',
-        { y: 28, opacity: 0 },
+        { y: 24, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '#sectionFeatures .section-header',
             start: 'top 88%',
             once: true
           },
-          y: 0, opacity: 1, duration: 0.65, ease: 'power3.out'
+          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out'
         }
       );
 
-      /* ── Section D — Showcase parallax ─────────────────── */
+      /* ── Section D — Showcase ──────────────────────────── */
       gsap.fromTo('#sectionShowcase .section-header',
-        { y: 28, opacity: 0 },
+        { y: 24, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '#sectionShowcase .section-header',
             start: 'top 88%',
             once: true
           },
-          y: 0, opacity: 1, duration: 0.65, ease: 'power3.out'
+          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out'
         }
       );
 
       gsap.fromTo('.showcase-phone-wrap',
-        { y: 48, opacity: 0, scale: 0.94 },
+        { y: 32, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '#showcaseStage',
             start: 'top 85%',
             once: true
           },
-          y: 0, opacity: 1, scale: 1, duration: 0.9, ease: 'power3.out'
+          y: 0, opacity: 1, duration: 0.7, ease: 'power3.out'
         }
       );
 
       gsap.fromTo('.showcase-phone-left',
-        { x: -40, opacity: 0 },
+        { x: -24, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '#showcaseStage',
             start: 'top 85%',
             once: true
           },
-          x: 0, opacity: 1, duration: 0.8, delay: 0.15, ease: 'power3.out'
+          x: 0, opacity: 1, duration: 0.7, delay: 0.1, ease: 'power3.out'
         }
       );
 
       gsap.fromTo('.showcase-phone-right',
-        { x: 40, opacity: 0 },
+        { x: 24, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '#showcaseStage',
             start: 'top 85%',
             once: true
           },
-          x: 0, opacity: 1, duration: 0.8, delay: 0.15, ease: 'power3.out'
+          x: 0, opacity: 1, duration: 0.7, delay: 0.1, ease: 'power3.out'
         }
       );
 
-      /* Parallax on center phone */
-      gsap.to('#showcasePhone', {
-        scrollTrigger: {
-          trigger: '#sectionShowcase',
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 1.2
-        },
-        y: -40,
-        ease: 'none'
-      });
-
       /* ── Section E — Health card & calorie ring ──────────── */
       gsap.fromTo('.health-card',
-        { y: 36, opacity: 0 },
+        { y: 24, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '.health-card',
             start: 'top 85%',
             once: true
           },
-          y: 0, opacity: 1, duration: 0.75, ease: 'power3.out'
+          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out'
         }
       );
 
@@ -715,14 +702,14 @@
 
       /* ── Section F — CTA ────────────────────────────────── */
       gsap.fromTo('.cta-wrap',
-        { y: 32, opacity: 0 },
+        { y: 24, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '.cta-wrap',
             start: 'top 88%',
             once: true
           },
-          y: 0, opacity: 1, duration: 0.75, ease: 'power3.out'
+          y: 0, opacity: 1, duration: 0.6, ease: 'power3.out'
         }
       );
 
@@ -744,7 +731,7 @@
         ) return;
 
         gsap.fromTo(el,
-          { y: 28, opacity: 0 },
+          { y: 20, opacity: 0 },
           {
             scrollTrigger: {
               trigger: el,
@@ -753,7 +740,7 @@
             },
             y: 0,
             opacity: 1,
-            duration: 0.65,
+            duration: 0.55,
             ease: 'power3.out'
           }
         );
