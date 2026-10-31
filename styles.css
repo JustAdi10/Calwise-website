@@ -398,18 +398,19 @@ p {
   position: relative;
 }
 
-/* Dynamic Island */
+/* Dynamic Island overlay for the notch-free app screenshot */
 .iphone-frame::before {
   content: '';
   position: absolute;
   top: 12px;
   left: 50%;
-  transform: translateX(-50%);
   width: 88px;
   height: 28px;
-  background: #000000;
+  transform: translateX(-50%);
   border-radius: 20px;
-  z-index: 10;
+  background: #000000;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .screen-shot {
@@ -809,6 +810,14 @@ p {
     inset 0 0 0 1px #2C2C2E,
     0 0 0 1px #000000,
     0 20px 40px -10px rgba(0, 0, 0, 0.22);
+}
+
+.showcase-phone-left .iphone-frame::before,
+.showcase-phone-right .iphone-frame::before {
+  top: 8px;
+  width: 58px;
+  height: 19px;
+  border-radius: 14px;
 }
 
 .showcase-phone-left .iphone-frame {
