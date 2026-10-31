@@ -516,47 +516,79 @@ p {
 }
 
 .step-card {
+  min-height: 360px;
+  perspective: 1000px;
+  outline: none;
+}
+
+.step-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: inherit;
+  transform-style: preserve-3d;
+  transition: transform 500ms ease;
+}
+
+.step-card:hover .step-card-inner,
+.step-card:focus-visible .step-card-inner {
+  transform: rotateY(180deg);
+}
+
+.step-card-face {
+  position: absolute;
+  inset: 0;
+  padding: clamp(var(--s-5), 4vw, var(--s-8));
   background: var(--c-dark-surface);
   border: 1px solid var(--c-dark-border);
   border-radius: var(--r-lg);
-  padding: var(--s-4);
-  display: flex;
-  align-items: flex-start;
-  gap: var(--s-3);
-  position: relative;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-.step-number {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--r-sm);
-  background: rgba(255, 138, 0, 0.12);
-  border: 1px solid rgba(255, 138, 0, 0.2);
+.step-card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.step-card-back {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 0.95rem;
-  font-variant-numeric: tabular-nums;
-  color: var(--c-orange);
-  flex-shrink: 0;
+  transform: rotateY(180deg);
+}
+
+.step-card-back p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #FFFFFF;
+}
+
+.step-card:focus-visible {
+  outline: 2px solid var(--c-orange);
+  outline-offset: 4px;
+  border-radius: var(--r-lg);
+}
+
+.step-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 0 var(--s-5);
+  opacity: 1;
+}
+
+.step-content {
+  max-width: 100%;
 }
 
 .step-content h3 {
   color: #FFFFFF;
-  margin-bottom: 6px;
-  font-size: 1.05rem;
+  margin-bottom: 10px;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
 }
 
 .step-content p {
   font-size: 0.92rem;
   color: var(--c-dark-text-muted);
-}
-
-.step-icon {
-  margin-left: auto;
-  flex-shrink: 0;
-  opacity: 0.45;
 }
 
 /* ── Section C — Features ───────────────────────────────────── */
@@ -1255,16 +1287,7 @@ textarea.field {
   }
 
   .steps-flow {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .step-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .step-icon {
-    margin-left: 0;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .features-grid {
@@ -1300,6 +1323,16 @@ textarea.field {
 
   .iphone-frame {
     width: min(40vw, 300px);
+  }
+
+  .steps-flow {
+    grid-template-columns: repeat(4, 1fr);
+    width: min(1280px, 96vw);
+    margin-inline: auto;
+  }
+
+  .step-card {
+    min-height: 400px;
   }
 
   .chip-1 { left: -34%; }
