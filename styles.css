@@ -529,8 +529,7 @@ p {
   transition: transform 500ms ease;
 }
 
-.step-card:hover .step-card-inner,
-.step-card:focus-visible .step-card-inner {
+.step-card.is-flipped .step-card-inner {
   transform: rotateY(180deg);
 }
 
