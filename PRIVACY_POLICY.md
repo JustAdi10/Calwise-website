@@ -1,7 +1,7 @@
 # Calwise Privacy Policy
 
-**Effective date:** [RELEASE DATE]
-**Last updated:** [RELEASE DATE]
+**Effective date:** November 10, 2026
+**Last updated:** November 10, 2026
 **Applies to:** Calwise for iOS and the Calwise services that link to this Policy
 
 Calwise ("Calwise", "we", "us" or "our") helps you record meals, understand what you eat and follow your progress. This Policy explains what information Calwise uses, why, who else receives it, and the choices you have.
