@@ -126,4 +126,4 @@ The home page also loads its animation code from jsDelivr, a public content netw
 We may update this Policy when Calwise, our providers or the law changes. For an important change we'll update the date above and tell you in the app, by email or on this website.
 
 ## 12. Contact
-For privacy questions, requests or complaints, email **support@calwise.tech**. Include enough to identify your Calwise account (such as its email address), but don't send passwords, sign-in codes or health information you don't need to.
+For privacy questions, requests or complaints, email **calwiseapp@gmail.com**. Include enough to identify your Calwise account (such as its email address), but don't send passwords, sign-in codes or health information you don't need to.
