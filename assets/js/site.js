@@ -80,6 +80,11 @@
       btn.setAttribute('aria-label', 'Switch to ' + next + ' mode');
       btn.setAttribute('title', 'Switch to ' + next + ' mode');
     });
+    // The tab icon follows the theme too (icon-*.png ↔ icon-dark-*.png).
+    document.querySelectorAll('link[rel="icon"][type="image/png"]').forEach(function (l) {
+      var href = l.getAttribute('href').replace('icon-dark-', 'icon-');
+      l.setAttribute('href', t === 'dark' ? href.replace('icon-', 'icon-dark-') : href);
+    });
     // The browser's toolbar colour follows the site's theme, not just the system's.
     document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
       m.setAttribute('content', root.hasAttribute('data-theme') ? THEME_COLOR[t] : THEME_COLOR[m.getAttribute('media') && m.getAttribute('media').indexOf('dark') !== -1 ? 'dark' : 'light']);

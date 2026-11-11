@@ -1,7 +1,7 @@
 # Calwise Privacy Policy
 
-**Effective date:** [RELEASE DATE]
-**Last updated:** [RELEASE DATE]
+**Effective date:** 10th November 2026
+**Last updated:** 11th November 2026
 **Applies to:** Calwise for iOS and the Calwise services that link to this Policy
 
 Calwise ("Calwise", "we", "us" or "our") helps you record meals, understand what you eat and follow your progress. This Policy explains what information Calwise uses, why, who else receives it, and the choices you have.
@@ -120,7 +120,7 @@ The Calwise app doesn't use cookies, and this website doesn't use advertising or
 
 The home and contact pages use Vercel Web Analytics to count visits. It doesn't use third-party cookies: Vercel tells visits apart by a code worked out from each request, which it discards after 24 hours. With each visit it may record the page, the site you came from, your approximate location, and your browser, operating system and type of device. Vercel says this information isn't tied to you or your IP address and can't be used to follow you across websites ([Vercel Web Analytics privacy](https://vercel.com/docs/analytics/privacy-policy)).
 
-The home page also loads its animation code from jsDelivr, a public content network, which receives your IP address the way any website you visit does.
+The contact form sends your name, email address and message to us through Google Forms, so Google receives them, along with your IP address, and handles them under the [Google Privacy Policy](https://policies.google.com/privacy). Everything else on this website, including its fonts and images, is served by the website itself. If you switch between light and dark mode, your browser remembers the choice on your device; it isn't sent to us.
 
 ## 11. Changes to this Policy
 We may update this Policy when Calwise, our providers or the law changes. For an important change we'll update the date above and tell you in the app, by email or on this website.
